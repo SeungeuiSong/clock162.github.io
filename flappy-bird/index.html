@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcade Games | Flappy Bird</title>
+    <link rel="stylesheet" href="flappy-bird-style.css">
+    <link rel="stylesheet" href="../style.css">
+
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Press+Start+2P&display=swap" rel="stylesheet">
+        
+    <script src="script.js"></script>
+
+    <!-- 
+        Credit for game assets: https://github.com/samuelcust/flappy-bird-assets/tree/master/sprites
+    -->
+</head>
+<body>
+    <header>
+        <div>
+            <div class="header-title">Arcade Games</div>
+            <div class="header-links">
+                <div><a href="../index.html">Games</a></div>
+                <div><a href="../about.html">About</a></div>
+            </div>
+        </div>
+    </header>
+    <div>
+        <canvas id="game-board"></canvas>
+    </div>
+    <footer>
+        <div>
+            <i id="play-button" class="fa fa-play" aria-hidden="true"></i>
+        </div>
+        <div id="restart">
+            <i class="fa fa-undo" aria-hidden="true"></i>
+        </div>
+        <div id="game-theme">
+            <i id="theme-button" class="fa fa-moon-o" aria-hidden="true"></i>
+        </div>
+    </footer>
+</body>
+</html>

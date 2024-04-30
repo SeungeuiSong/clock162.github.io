@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    text-decoration: none;
+
+    font-family: "Concert One", sans-serif;
+}
+
+header {
+    width: 100vw;
+    background-color: #8fcb9b;
+}
+
+header > div {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-title {
+    font-size: 1.75rem;
+}
+
+.header-links {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-links > div {
+    font-size: 1.2rem;
+    margin: 0 10px;
+}
+
+.header-links > div > a {
+    color: black;
+}
+
+.game-card {
+    cursor: pointer;
+    position: relative;
+    color: black;
+    display: block;
+    width: 300px;
+    padding: 15px;
+    margin: 25px auto;
+    border-radius: 15px;
+    border: 5px solid #8fcb9b;
+    background-color: #D5F5E3;
+}
+
+.game-info {
+    display: flex;
+    align-items: flex-start;
+}
+
+.game-info > div {
+    margin: 5px;
+}
+
+.game-info > div > img {
+    width: 128px;
+    height: 87px;
+    object-fit: cover;
+}
+
+.card-link {
+    font-size: .85rem;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.card-link > a {
+    color: black;
+}
+
+.card-link > a:hover {
+    text-decoration: underline;
+}
+
+.game-description {
+    display: none;
+    height: 0;
+    padding: 10px 16px;
+    margin: 10px;
+    color: #808B96;
+    border: 10px;
+    background-color:  #F8F9F9;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+} 
+
+.game-card:hover > .game-description {
+    display: block;
+    height: fit-content;
+}
+
+/* About Page styling */
+#about-main-tag {
+    padding: 40px 0;
+}
+
+.about-game-card {
+    width: 90%;
+    padding: 15px;
+    margin: 25px auto;
+    border-radius: 15px;
+    border: 4px solid #8fcb9b;
+}
+
+.game-title {
+    color: #239B56;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.disclaimer {
+    color: purple;
+    margin: 25px 0;
+}
+
+span > a {
+    color: purple;
+    text-decoration: underline;
+}
+
+@media only screen and (min-width: 745px) {
+    header > div {
+        width: 745px;
+        margin: auto;
+    }
+
+    .about-game-card {
+        width: 725px;
+    }
+}

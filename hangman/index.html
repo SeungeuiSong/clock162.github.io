@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="hangman-style.css">
+    <link rel="stylesheet" href="../style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <script src="script.js"></script>
+
+    <!-- 
+        Credit for game assets: https://github.com/BelalAnan/GameStation/blob/main/img
+    -->
+</head>
+<body>
+    <header>
+        <div>
+            <div class="header-title">Arcade Games</div>
+            <div class="header-links">
+                <div><a href="../index.html">Games</a></div>
+                <div><a href="../about.html">About</a></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="page-title">Hangman</div>
+        <div id="select-styling">
+            <select id="selection-tag">
+                <option value="0">Computer Architecture</option>
+                <option value="1">Software Engineering</option>
+                <option value="2">Web Programming</option>
+            </select>              
+        </div>
+        <div id="score-container">
+            <div id="score">Score: 0</div>
+            <div id="streak">Streak: 0/5</div>
+        </div>
+        <div id="image-display">
+            <img id="hangman-img" src="./assets/1.png" alt="hangman">
+        </div>
+        <div id="word-display"></div>
+        <div id="keyboard"></div>
+        <div id="hide-modal">
+            <div id="modal-styling"></div>
+            <button id="next-button">Next</button>
+        </div>
+        <div id="hide-game-over">
+            <div>
+                <div>Game Over!</div>
+                <button id="play-again">PLAY AGAIN</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
