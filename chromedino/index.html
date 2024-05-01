@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div>
+            <div class="header-title">Arcade Games</div>
+            <div class="header-links">
+                <div><a href="../index.html">Games</a></div>
+                <div><a href="../about.html">About</a></div>
+            </div>
+        </div>
+    </header>
+    <canvas id="canvas"></canvas>
+    <p id="timerDisplay"></p> 
+    <button onclick="restartGame()">reset</button> 
+    <script src="main.js"></script>
+    <script>
+        function updateTimerDisplay() {
+            document.getElementById('timerDisplay').innerText = "Timer: " + gameTime +"s";
+            setTimeout(updateTimerDisplay, 100);
+        }
+        updateTimerDisplay();
+        function restartGame() {
+            gamespeed = 1;
+            dino.x = 10;
+            dino.y = 500;
+            timer = 0;
+            gameTime = 0;
+            obstackle = false;
+            countAfterobstackle = 0;
+            cactusmultiple = [];
+            backgroundmultiple = [];
+            jumptimer = 0;
+            animaition;
+            ifOnTheGround = true;
+            cancelAnimationFrame(animaition);
+            game();
+        }
+    </script>
+</body>
+</html>
