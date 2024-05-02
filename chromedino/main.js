@@ -1,9 +1,18 @@
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
+console.log("창의 너비: " + window.innerWidth);
 
 
-canvas.width = window.innerWidth -700;
-canvas.height = window.innerHeight - 100;
+window.onload = () => {
+    if(window.innerWidth < 1000) {
+        canvas.width = 500;
+        canvas.height = 600;
+    } 
+    else {
+        canvas.width = window.innerWidth - 600;
+        canvas.height = window.innerHeight - 500;
+    }
+}
 
 var dino = {
     x : 10,
@@ -20,8 +29,9 @@ var dino = {
     }
 }
 var gameover = {
-    x : 350,
-    y : 300,
+    
+    x: (window.innerWidth < 1000) ? 150 : 300,
+    y: 300,
     width : 200,
     height : 100,
     draw(){
