@@ -8,8 +8,8 @@ window.onload = () => {
         canvas.height = 600;
     } 
     else {
-        canvas.width = window.innerWidth - 600;
-        canvas.height = window.innerHeight - 500;
+        canvas.width = 900;
+        canvas.height = 800;
     }
 }
 
