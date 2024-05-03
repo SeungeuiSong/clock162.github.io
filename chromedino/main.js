@@ -227,8 +227,8 @@ function game(){
     if(dino.y === 500){
         ifOnTheGround=true;
     }
-    ground.draw();
     dino.draw();
+    ground.draw();
 }
 
 game();
