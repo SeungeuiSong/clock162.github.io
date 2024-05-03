@@ -53,7 +53,7 @@ var cloudimg = new Image();
 var cactus = new Image();
 var cloudimg = new Image();
 var groundimg = new Image();
-groundimg.src = './assets/other/Track.png';
+groundimg.src = './assets/Track.png';
 
 var otherdinoimg = new Image();
 var img5 = new Image();
