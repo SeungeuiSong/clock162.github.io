@@ -43,9 +43,9 @@ var ground = {
     width : 900,
     height : 60,
     draw(){
-        for (let i = 0; i < Math.ceil(canvas.width / this.width) + 1; i++) {
-            ctx.drawImage(groundimg, this.x + i * this.width, this.y, this.width, this.height);
-        } 
+        
+        ctx.drawImage(groundimg,this.x,this.y,this.width, this.height);  
+        
     }
 }
 var imgRunning = new Image();
@@ -226,6 +226,7 @@ function game(){
     if(dino.y === 500){
         ifOnTheGround=true;
     }
+    ground.draw();
     dino.draw();
 }
 
