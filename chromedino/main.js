@@ -27,6 +27,20 @@ var dino = {
         ctx.drawImage(imgRunning,this.x,this.y,this.width, this.height);   
     }
 }
+
+var ground = {
+    x : 10,
+    y : 510,
+    width : 900,
+    height : 60,
+    draw(){
+        
+        for (let i = 0; i < Math.ceil(canvas.width / this.width) + 1; i++) {
+            ctx.drawImage(groundimg, this.x + i * this.width, this.y, this.width, this.height);
+        } 
+    }
+}
+
 var gameover = {
     
     x: (window.innerWidth < 1000) ? 150 : 300,
@@ -35,17 +49,6 @@ var gameover = {
     height : 100,
     draw(){
         ctx.drawImage(img6,this.x,this.y,this.width, this.height);   
-    }
-}
-var ground = {
-    x : 10,
-    y : 510,
-    width : 900,
-    height : 60,
-    draw(){
-        
-        ctx.drawImage(groundimg,this.x,this.y,this.width, this.height);  
-        
     }
 }
 var imgRunning = new Image();
