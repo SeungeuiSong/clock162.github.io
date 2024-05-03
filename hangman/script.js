@@ -219,6 +219,8 @@ function setCategory(event) {
     currentCategory = event.target.value;
     currentWordIndex = 0;
 
+    correctGuess = 0;
+
     characterImageIndex = 0;
     hangmanImgTag.src = characterImages[characterImageIndex++]; 
 
