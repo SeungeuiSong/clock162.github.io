@@ -28,12 +28,27 @@ var dino = {
     }
 }
 
-var ground = {
+var firstground = {
     x : 10,
     y : 510,
     width : 900,
     height : 60,
     draw(){
+        if(this.x ===-890){
+
+            this.x = 910;
+        }
+        ctx.drawImage(groundimg,this.x,this.y,this.width, this.height);  
+    }
+}
+var secondground = {
+    x : 910,
+    y : 510,
+    width : 900,
+    height : 60,
+    draw(){
+        if(this.x ===-890)
+            this.x=910;
         ctx.drawImage(groundimg,this.x,this.y,this.width, this.height);  
     }
 }
@@ -157,11 +172,10 @@ function game(){
     timer ++;
     gameTime = timer/100;
     countAfterobstackle ++;
-    ground.x -= 3*gamespeed;
+    firstground.x -= 3*gamespeed;
+    secondground.x -= 3*gamespeed;
     updateTimerDisplay();
-    if (ground.x <= -ground.width) {
-        ground.x += canvas.width;
-    }
+
     ctx.clearRect(0,0, canvas.width, canvas.height);
     if(timer %1000===0){
         gamespeed++;
@@ -226,7 +240,8 @@ function game(){
     if(dino.y === 500){
         ifOnTheGround=true;
     }
-    ground.draw();
+    firstground.draw();
+    secondground.draw();
     dino.draw();
 }
 
