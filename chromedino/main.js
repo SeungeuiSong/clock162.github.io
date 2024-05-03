@@ -53,7 +53,8 @@ var cloudimg = new Image();
 var cactus = new Image();
 var cloudimg = new Image();
 var groundimg = new Image();
-groundimg.src = './assets/Track.png';
+// groundimg.src = './assets/Track.png';
+groundimg.src ='./assets/runningdino.png';
 
 var otherdinoimg = new Image();
 var img5 = new Image();
@@ -226,7 +227,7 @@ function game(){
     if(dino.y === 500){
         ifOnTheGround=true;
     }
-    //ground.draw();
+    ground.draw();
     dino.draw();
 }
 
