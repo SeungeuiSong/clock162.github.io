@@ -293,4 +293,12 @@ document.addEventListener('keydown',function(e){
         jump = true;
         ifOnTheGround=false;
     }
+    
+})
+document.addEventListener('click', function(e){
+    if (ifOnTheGround ===true){
+        jump = true;
+        ifOnTheGround=false;
+    }
+    
 })
