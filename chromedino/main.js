@@ -1,6 +1,5 @@
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
-console.log("창의 너비: " + window.innerWidth);
 
 
 window.onload = () => {
@@ -9,8 +8,8 @@ window.onload = () => {
         canvas.height = 600;
     } 
     else {
-        canvas.width = window.innerWidth - 600;
-        canvas.height = window.innerHeight - 500;
+        canvas.width = 800;
+        canvas.height = 600;
     }
 }
 
