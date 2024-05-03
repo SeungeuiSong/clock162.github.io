@@ -9,7 +9,7 @@ window.onload = () => {
     } 
     else {
         canvas.width = 900;
-        canvas.height = 800;
+        canvas.height = 900;
     }
 }
 
@@ -43,10 +43,9 @@ var ground = {
     width : 900,
     height : 60,
     draw(){
-        ctx.drawImage(groundimg,this.x,this.y,this.width, this.height); 
-        // for (let i = 0; i < Math.ceil(canvas.width / this.width) + 1; i++) {
-        //     ctx.drawImage(groundimg, this.x + i * this.width, this.y, this.width, this.height);
-        // } 
+        for (let i = 0; i < Math.ceil(canvas.width / this.width) + 1; i++) {
+            ctx.drawImage(groundimg, this.x + i * this.width, this.y, this.width, this.height);
+        } 
     }
 }
 var imgRunning = new Image();
@@ -54,8 +53,7 @@ var cloudimg = new Image();
 var cactus = new Image();
 var cloudimg = new Image();
 var groundimg = new Image();
-// groundimg.src = './assets/Track.png';
-groundimg.src ='./assets/runningdino.png';
+groundimg.src = './assets/other/Track.png';
 
 var otherdinoimg = new Image();
 var img5 = new Image();
@@ -228,8 +226,8 @@ function game(){
     if(dino.y === 500){
         ifOnTheGround=true;
     }
-    dino.draw();
     ground.draw();
+    dino.draw();
 }
 
 game();
